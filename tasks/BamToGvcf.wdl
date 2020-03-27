@@ -59,7 +59,7 @@ workflow BamToGvcf {
         ref_fasta = ref_fasta,
         ref_fasta_index = ref_fasta_index,
         hc_scatter = hc_divisor,
-        make_gvcf = true,
+        make_gvcf = false,
         preemptible_tries = agg_preemptible_tries
      }
   }

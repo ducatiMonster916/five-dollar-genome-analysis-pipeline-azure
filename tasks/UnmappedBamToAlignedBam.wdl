@@ -20,7 +20,7 @@ version 1.0
 #import "./Alignment.wdl" as Alignment
 #import "./SplitLargeReadGroup.wdl" as SplitRG
 #import "./Qc.wdl" as QC
-#import "./BamProcessing.wdl" as Processing
+#import "https://raw.githubusercontent.com/ducatiMonster916/five-dollar-genome-analysis-pipeline-azure/master-azure/tasks/BamProcessing.wdl" as Processing
 #import "./Utilities.wdl" as Utils
 #import "../structs/GermlineStructs.wdl" as Structs
 

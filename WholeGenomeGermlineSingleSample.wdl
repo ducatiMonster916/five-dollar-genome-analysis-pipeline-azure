@@ -39,7 +39,7 @@ version 1.0
 #import "./structs/GermlineStructs.wdl"
 
 # Git URL import
-import "https://raw.githubusercontent.com/microsoft/five-dollar-genome-analysis-pipeline-azure/az1.1.0/tasks/UnmappedBamToAlignedBam.wdl" as ToBam
+import "https://raw.githubusercontent.com/ducatiMonster916/five-dollar-genome-analysis-pipeline-azure/master-azure/tasks/UnmappedBamToAlignedBam.wdl" as ToBam
 import "https://raw.githubusercontent.com/microsoft/five-dollar-genome-analysis-pipeline-azure/az1.1.0/tasks/AggregatedBamQC.wdl" as AggregatedQC
 import "https://raw.githubusercontent.com/microsoft/five-dollar-genome-analysis-pipeline-azure/az1.1.0/tasks/GermlineVariantDiscovery.wdl" as Calling
 import "https://raw.githubusercontent.com/microsoft/five-dollar-genome-analysis-pipeline-azure/az1.1.0/tasks/Qc.wdl" as QC

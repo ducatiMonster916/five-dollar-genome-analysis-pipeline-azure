@@ -20,7 +20,7 @@ version 1.0
 #import "./Alignment.wdl" as Alignment
 #import "./SplitLargeReadGroup.wdl" as SplitRG
 #import "./Qc.wdl" as QC
-#import "https://raw.githubusercontent.com/ducatiMonster916/five-dollar-genome-analysis-pipeline-azure/master-azure/tasks/BamProcessing.wdl" as Processing
+#import "./BamProcessing.wdl" as Processing
 #import "./Utilities.wdl" as Utils
 #import "../structs/GermlineStructs.wdl" as Structs
 
@@ -28,7 +28,7 @@ version 1.0
 import "https://raw.githubusercontent.com/microsoft/five-dollar-genome-analysis-pipeline-azure/az1.1.0/tasks/Alignment.wdl" as Alignment
 import "https://raw.githubusercontent.com/microsoft/five-dollar-genome-analysis-pipeline-azure/az1.1.0/tasks/SplitLargeReadGroup.wdl" as SplitRG
 import "https://raw.githubusercontent.com/microsoft/five-dollar-genome-analysis-pipeline-azure/az1.1.0/tasks/Qc.wdl" as QC
-import "https://raw.githubusercontent.com/microsoft/five-dollar-genome-analysis-pipeline-azure/az1.1.0/tasks/BamProcessing.wdl" as Processing
+import "https://raw.githubusercontent.com/ducatiMonster916/five-dollar-genome-analysis-pipeline-azure/master-azure/tasks/BamProcessing.wdl" as Processing
 import "https://raw.githubusercontent.com/microsoft/five-dollar-genome-analysis-pipeline-azure/az1.1.0/tasks/Utilities.wdl" as Utils
 import "https://raw.githubusercontent.com/microsoft/five-dollar-genome-analysis-pipeline-azure/az1.1.0/structs/GermlineStructs.wdl" as Structs
 

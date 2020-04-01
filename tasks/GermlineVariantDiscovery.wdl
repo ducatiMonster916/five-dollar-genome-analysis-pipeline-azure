@@ -68,7 +68,7 @@ task HaplotypeCaller_GATK35_GVCF {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
     memory: "10 GB"
-    cpu: "1"
+    cpu: "2"
     disk: disk_size + " GB"
     maxRetries: preemptible_tries
   }
@@ -121,7 +121,7 @@ task HaplotypeCaller_GATK4_VCF {
   runtime {
     docker: gatk_docker
     memory: "6.5 GB"
-    cpu: "1"
+    cpu: "2"
     disk: disk_size + " GB"
     maxRetries: preemptible_tries
   }
@@ -153,6 +153,7 @@ task MergeVCFs {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
     memory: "3 GB"
+    cpu: "32"
     disk: "~{disk_size} GB"
     maxRetries: preemptible_tries
   }
@@ -191,6 +192,7 @@ task HardFilterVcf {
   runtime {
     docker: gatk_docker
     memory: "3 GB"
+    cpu: "2"
     disk: disk_size + " GB"
     maxRetries: preemptible_tries
   }

@@ -133,6 +133,7 @@ task MarkDuplicates {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
     memory: "7 GiB"
+    cpu: "32"
     disk: disk_size + " GB"
     maxRetries: preemptible_tries
   }
@@ -187,6 +188,7 @@ task BaseRecalibrator {
   runtime {
     docker: gatk_docker
     memory: "6 GiB"
+    cpu: "4"
     disk: disk_size + " GB"
     maxRetries: preemptible_tries
   }
@@ -242,6 +244,7 @@ task ApplyBQSR {
   runtime {
     docker: gatk_docker
     memory: "3500 MiB"
+    cpu: "32"
     disk: disk_size + " GB"
     maxRetries: preemptible_tries
   }
@@ -269,6 +272,7 @@ task GatherBqsrReports {
   runtime {
     docker: gatk_docker
     memory: "3500 MiB"
+    cpu: "32"
     disk: "20 GB"
     maxRetries: preemptible_tries
   }
@@ -301,6 +305,7 @@ task GatherSortedBamFiles {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
     memory: "3 GiB"
+    cpu: "32"
     disk: disk_size + " GB"
     maxRetries: preemptible_tries
   }
@@ -336,6 +341,7 @@ task GatherUnsortedBamFiles {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
     memory: "3 GiB"
+    cpu: "32"
     disk: disk_size + " GB"
     maxRetries: preemptible_tries
   }

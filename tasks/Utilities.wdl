@@ -165,6 +165,8 @@ task ConvertToBam {
     File ref_fasta_index
     String output_basename
   }
+  
+  Int disk_size = ceil(3 * size(input_cram, "GB") + ref_size) + 20
 
   command <<<
     set -e
@@ -178,7 +180,7 @@ task ConvertToBam {
     docker: "us.gcr.io/broad-gotc-prod/genomes-in-the-cloud:2.4.1-1540490856"
     memory: "3 GB"
     cpu: "1"
-    disk: "200 GB"
+    disk: disk_size + " GB"
     maxRetries: 3
   }
   output {
